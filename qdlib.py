@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import multiprocessing as mp
 import os
 import secrets
+import pickle
 
 
 # Variables
@@ -12,7 +13,6 @@ LOCAL_DIR = "/".join(__file__.split("/")[:-1])
 THREADS = int([ts := os.cpu_count(), 1][int(ts is None)] / 2)
 mpl.rcParams["mathtext.fontset"] = "cm"
 mpl.rcParams["font.family"] = "serif"
-
 
 # Functions
 def atomic_qubits_evolution(rf, dr, ld, n=50000, ts=None, qs=None, threads=THREADS):
