@@ -75,4 +75,4 @@ for i, result in enumerate(results):
 print("\r" + " "*os.get_terminal_size().columns + "\rFrames generated")
 
 # Stitch Frames
-os.system(f'ffmpeg -y -f image2 -framerate {max(int(len(lds) / DURATION), 1)} -pattern_type glob -i "{LOCAL_DIR}/dro_ld_frames/*.png" dro_ld.mp4')
+os.system(f'ffmpeg -y -f image2 -framerate {max(int(len(lds) / DURATION), 1)} -pattern_type glob -i "{LOCAL_DIR}/dro_ld_frames/*.png" "{LOCAL_DIR}/dro_ld.mp4"')
