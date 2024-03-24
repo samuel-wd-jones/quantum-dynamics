@@ -70,7 +70,7 @@ for i, result in enumerate(results):
 
     plt.xlim([0 -.1, 2.5 +.1])
     plt.ylim([0 -.1, 1 +.1])
-    plt.savefig(f"{LOCAL_DIR}/dro_ld_frames/{i:010}.png")
+    plt.savefig(f"{LOCAL_DIR}/dro_ld_frames/{i:010}.png", dpi=600)
     plt.close()
 print("\r" + " "*os.get_terminal_size().columns + "\rFrames generated")
 
